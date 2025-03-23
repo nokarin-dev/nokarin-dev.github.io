@@ -1,0 +1,102 @@
+<!--
+Coded By Nokarin_Dev
+Please support me with giving an credit when using my projects :)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/output.css" rel="stylesheet">
+    <title>nokarin | Portofolio</title>
+</head>
+
+<body class="transition-colors bg-gray-200 text-black dark:text-white dark:bg-slate-900">
+    <!-- Header -->
+    <header
+        class="flex flex-row fixed w-full backdrop-blur-2xl bg-zinc-500 bg-opacity-50 dark:bg-zinc-950 dark:bg-opacity-50">
+        <div class="flex flex-row md:max-w-6xl p-5 w-full justify-center items-center mx-auto">
+            <!-- Desktop Header -->
+            <div class="hidden md:flex flex-row justify-between items-center w-full">
+                <div class="relative">
+                    <button id="theme-button"
+                        class="flex flex-row items-center px-4 py-1.5 bg-zinc-400 dark:bg-slate-900 rounded-lg">
+                        <img src="assets/theme arrow.svg" class="mr-2 w-6" />
+                        <span id="current-theme" class="font-bold text-sm">System</span>
+                    </button>
+
+                    <div id="theme-dropdown"
+                        class="hidden absolute left-0 mt-2 w-36 bg-gray-200 dark:bg-slate-900 shadow-lg rounded-lg">
+                        <button
+                            class="theme-option block w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg"
+                            data-theme="system">System</button>
+                        <button
+                            class="theme-option block w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg"
+                            data-theme="light">Light</button>
+                        <button
+                            class="theme-option block w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg"
+                            data-theme="dark">Dark</button>
+                    </div>
+                </div>
+
+                <div class="flex flex-row gap-x-10 font-black">
+                    <a class="text-gray-700 dark:text-zinc-400 hover:text-black hover:dark:text-white duration-200"
+                        href="#tools">TOOLS</a>
+                    <a class="text-gray-700 dark:text-zinc-400 hover:text-black hover:dark:text-white duration-200"
+                        href="#certificate">CERTIFICATE</a>
+                    <a class="text-gray-700 dark:text-zinc-400 hover:text-black hover:dark:text-white duration-200"
+                        href="#project">MY
+                        PROJECT</a>
+                </div>
+            </div>
+
+            <!-- Mobile Header -->
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex flex-row pt-60 w-full md:max-w-6xl mx-auto">
+        <div class="flex flex-row justify-between items-center w-full">
+            <div class="flex flex-col w-full">
+                <p class="font-black text-center md:text-start text-4xl md:text-7xl">NOKARIN DEV</p>
+                <p class="font-bold text-2xl max-w-[36rem]">Hello, im nokarin or called as rio. I’m from indonesia and I
+                    has
+                    experienced on full stack website developers</p>
+            </div>
+
+            <button type="submit"
+                class="relative shrink-0 bottom-0 flex justify-center items-center gap-2 rounded-xl text-white font-black bg-[#2B4E9A] uppercase px-8 py-4 z-10 overflow-hidden ease-in-out duration-300 group hover:text-black hover:bg-white active:scale-95 active:duration-0 focus:bg-white focus:text-black isolation-auto before:absolute before:w-full before:transition-all before:duration-300 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-[#FFF] before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-300">
+                <span
+                    class="truncate eaes-in-out duration-300 group-active:-translate-x-96 group-focus:translate-x-96">Contact
+                    Me</span>
+                <div
+                    class="absolute flex flex-row justify-center items-center gap-2 -translate-x-96 eaes-in-out duration-300 group-active:translate-x-0 group-focus:translate-x-0">
+                    <div class="animate-spin size-4 border-2 border-[#000] border-t-transparent rounded-full"></div>
+                    Processing...
+                </div>
+                <svg class="fill-white group-hover:fill-black group-hover:-translate-x-0 group-active:translate-x-96 group-active:duration-0 group-focus:translate-x-96 group-focus:fill-black ease-in-out duration-300"
+                    stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="16"
+                    width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="m476.59 227.05-.16-.07L49.35 49.84A23.56 23.56 0 0 0 27.14 52 24.65 24.65 0 0 0 16 72.59v113.29a24 24 0 0 0 19.52 23.57l232.93 43.07a4 4 0 0 1 0 7.86L35.53 303.45A24 24 0 0 0 16 327v113.31A23.57 23.57 0 0 0 26.59 460a23.94 23.94 0 0 0 13.22 4 24.55 24.55 0 0 0 9.52-1.93L476.4 285.94l.19-.09a32 32 0 0 0 0-58.8z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <!-- <footer>
+        <div
+            class="flex flex-row fixed w-full backdrop-blur-2xl bottom-0 justify-center items-center mx-auto font-bold">
+            <p>&copy; nokarin 2025. All Rights Reserved.</p>
+        </div>
+    </footer> -->
+
+    <!-- Script -->
+    <script src="js/theme.js"></script>
+</body>
+
+</html>
