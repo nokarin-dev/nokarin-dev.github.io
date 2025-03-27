@@ -22,7 +22,7 @@ Please support me with giving an credit when using my projects :)
             <div class="hidden md:flex flex-row justify-between items-center w-full">
                 <div class="relative">
                     <button id="theme-button"
-                        class="flex flex-row items-center px-4 py-1.5 bg-zinc-400 dark:bg-slate-900 rounded-lg">
+                        class="flex flex-row items-center px-4 py-1.5 bg-zinc-400 dark:bg-slate-900 rounded-lg before:scale-120 active:scale-90">
                         <img src="assets/theme arrow.svg" class="mr-2 w-6" />
                         <span id="current-theme" class="font-bold text-sm">System</span>
                     </button>
@@ -42,32 +42,66 @@ Please support me with giving an credit when using my projects :)
                 </div>
 
                 <div class="flex flex-row gap-x-10 font-black">
-                    <a class="text-gray-700 dark:text-zinc-400 hover:text-black hover:dark:text-white duration-200"
+                    <a class="text-gray-700 dark:text-gray-400 hover:text-white duration-200"
                         href="#tools">TOOLS</a>
-                    <a class="text-gray-700 dark:text-zinc-400 hover:text-black hover:dark:text-white duration-200"
+                    <a class="text-gray-700 dark:text-gray-400 hover:text-white duration-200"
                         href="#certificate">CERTIFICATE</a>
-                    <a class="text-gray-700 dark:text-zinc-400 hover:text-black hover:dark:text-white duration-200"
+                    <a class="text-gray-700 dark:text-gray-400 hover:text-white duration-200"
                         href="#project">MY
                         PROJECT</a>
                 </div>
             </div>
 
             <!-- Mobile Header -->
-        </div>
+            <div class="flex md:hidden justify-between w-full">
+                <div class="relative">
+                    <button id="theme-button"
+                        class="flex flex-row items-center px-4 py-1.5 bg-slate-500 bg-opacity-40 dark:bg-slate-800 rounded-lg before:scale-120 active:scale-90">
+                        <img src="assets/theme arrow.svg" class="mr-2 w-6" />
+                        <span id="current-theme" class="font-bold text-sm text-white">System</span>
+                    </button>
+
+                    <div id="theme-dropdown"
+                        class="hidden absolute left-0 mt-2 w-36 bg-gray-200 dark:bg-slate-900 shadow-lg rounded-lg">
+                        <button
+                            class="theme-option block w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg"
+                            data-theme="system">System</button>
+                        <button
+                            class="theme-option block w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg"
+                            data-theme="light">Light</button>
+                        <button
+                            class="theme-option block w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg"
+                            data-theme="dark">Dark</button>
+                    </div>
+                </div>
+
+                <button type="button"
+                    class="p-2.5 justify-center items-center text-sm rounded-lg hover:bg-slate-500 hvoer:bg-opacity-40 dark:hover:bg-slate-800 text-white"
+                    aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
     </header>
 
     <!-- Main Content -->
-    <main class="flex flex-row pt-60 w-full md:max-w-6xl mx-auto">
-        <div class="flex flex-row justify-between items-center w-full">
+    <main class="flex flex-row pt-52 md:pt-60 w-full md:max-w-6xl mx-auto">
+        <div
+            class="flex flex-col md:flex-row px-5 md:px-0 justify-between items-center text-center md:text-left w-full">
             <div class="flex flex-col w-full">
-                <p class="font-black text-center md:text-start text-4xl md:text-7xl">NOKARIN DEV</p>
-                <p class="font-bold text-2xl max-w-[36rem]">Hello, im nokarin or called as rio. I’m from indonesia and I
+                <p class="font-black text-center md:text-start text-5xl md:text-7xl">NOKARIN DEV</p>
+                <p class="font-bold text-xl md:text-2xl max-w-[36rem]">Hello, im nokarin or called as rio. I’m from
+                    indonesia and I
                     has
                     experienced on full stack website developers</p>
             </div>
 
             <button type="submit"
-                class="relative shrink-0 bottom-0 flex justify-center items-center gap-2 rounded-xl text-white font-black bg-[#2B4E9A] uppercase px-8 py-4 z-10 overflow-hidden ease-in-out duration-300 group hover:text-black hover:bg-white active:scale-95 active:duration-0 focus:bg-white focus:text-black isolation-auto before:absolute before:w-full before:transition-all before:duration-300 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-[#FFF] before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-300">
+                class="relative w-fit mt-10 md:mt-0 shrink-0 bottom-0 flex justify-center items-center gap-2 rounded-xl text-white font-black bg-[#2B4E9A] uppercase px-8 py-4 z-10 overflow-hidden ease-in-out duration-300 group hover:text-black hover:bg-white active:scale-95 active:duration-0 focus:bg-white focus:text-black isolation-auto before:absolute before:w-full before:transition-all before:duration-300 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-[#FFF] before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-300">
                 <span
                     class="truncate eaes-in-out duration-300 group-active:-translate-x-96 group-focus:translate-x-96">Contact
                     Me</span>

@@ -1,7 +1,7 @@
-const themeButton = document.getElementById("theme-button");
-const themeDropdown = document.getElementById("theme-dropdown");
-const currentThemeText = document.getElementById("current-theme");
+const themeButtons = document.querySelectorAll("#theme-button");
+const themeDropdowns = document.querySelectorAll("#theme-dropdown");
 const themeOptions = document.querySelectorAll(".theme-option");
+const currentThemeTexts = document.querySelectorAll("#current-theme");
 
 function applyTheme(theme) {
     if (theme === "dark") {
@@ -18,7 +18,10 @@ function applyTheme(theme) {
             document.documentElement.classList.remove("dark");
         }
     }
-    currentThemeText.textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
+
+    currentThemeTexts.forEach(text => {
+        text.textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
+    });
 }
 
 // Set theme on page load
@@ -26,8 +29,11 @@ const savedTheme = localStorage.getItem("theme") || "system";
 applyTheme(savedTheme);
 
 // Toggle dropdown visibility
-themeButton.addEventListener("click", () => {
-    themeDropdown.classList.toggle("hidden");
+themeButtons.forEach((button, index) => {
+    button.addEventListener("click", (e) => {
+        themeDropdowns[index].classList.toggle("hidden");
+        e.stopPropagation();
+    });
 });
 
 // Apply selected theme
@@ -35,13 +41,16 @@ themeOptions.forEach(option => {
     option.addEventListener("click", (e) => {
         const selectedTheme = e.target.dataset.theme;
         applyTheme(selectedTheme);
-        themeDropdown.classList.add("hidden");
+
+        themeDropdowns.forEach(dropdown => dropdown.classList.add("hidden"));
     });
 });
 
 // Hide dropdown when clicking outside
 document.addEventListener("click", (e) => {
-    if (!themeButton.contains(e.target) && !themeDropdown.contains(e.target)) {
-        themeDropdown.classList.add("hidden");
-    }
+    themeDropdowns.forEach(dropdown => {
+        if (!dropdown.contains(e.target) && ![...themeButtons].some(btn => btn.contains(e.target))) {
+            dropdown.classList.add("hidden");
+        }
+    });
 });
