@@ -1,3 +1,10 @@
+/**
+ * @author nokarin-dev
+ * @license MIT
+ * @copyright nokarin-dev
+ * @file theme.js
+ */
+
 const themeButtons = document.querySelectorAll("#theme-button");
 const themeDropdowns = document.querySelectorAll("#theme-dropdown");
 const themeOptions = document.querySelectorAll(".theme-option");

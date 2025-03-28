@@ -13,41 +13,39 @@ Please support me with giving an credit when using my projects :)
     <title>nokarin | Portofolio</title>
 </head>
 
-<body class="transition-colors bg-gray-200 text-black dark:text-white dark:bg-slate-900">
+<body class="transition-colors bg-gray-300 text-black dark:text-white dark:bg-zinc-950">
     <!-- Header -->
-    <header
-        class="flex flex-row fixed w-full backdrop-blur-2xl bg-zinc-500 bg-opacity-50 dark:bg-zinc-950 dark:bg-opacity-50">
-        <div class="flex flex-row md:max-w-6xl p-5 w-full justify-center items-center mx-auto">
+    <header class="flex flex-row fixed w-full justify-center items-center duration-300">
+        <div
+            class="flex flex-row max-w-6xl py-4 px-8 w-full justify-center items-center md:mx-auto bg-zinc-400 bg-opacity-50 dark:bg-zinc-900 dark:bg-opacity-50 backdrop-blur-2xl md:rounded-lg md:m-5">
             <!-- Desktop Header -->
             <div class="hidden md:flex flex-row justify-between items-center w-full">
                 <div class="relative">
                     <button id="theme-button"
-                        class="flex flex-row items-center px-4 py-1.5 bg-zinc-400 dark:bg-slate-900 rounded-lg before:scale-120 active:scale-90">
+                        class="flex flex-row items-center px-4 py-1.5 bg-zinc-400 dark:bg-zinc-900 rounded-lg before:scale-120 active:scale-90">
                         <img src="assets/theme arrow.svg" class="mr-2 w-6" />
                         <span id="current-theme" class="font-bold text-sm">System</span>
                     </button>
 
                     <div id="theme-dropdown"
-                        class="hidden absolute left-0 mt-2 w-36 bg-gray-200 dark:bg-slate-900 shadow-lg rounded-lg">
+                        class="hidden absolute left-0 mt-2 w-36 bg-gray-300 dark:bg-zinc-900 shadow-lg rounded-lg">
                         <button
-                            class="theme-option block w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg"
+                            class="theme-option block w-full text-left px-4 py-2 hover:bg-gray-400 dark:hover:bg-zinc-800 rounded-lg"
                             data-theme="system">System</button>
                         <button
-                            class="theme-option block w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg"
+                            class="theme-option block w-full text-left px-4 py-2 hover:bg-gray-400 dark:hover:bg-zinc-800 rounded-lg"
                             data-theme="light">Light</button>
                         <button
-                            class="theme-option block w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg"
+                            class="theme-option block w-full text-left px-4 py-2 hover:bg-gray-400 dark:hover:bg-zinc-800 rounded-lg"
                             data-theme="dark">Dark</button>
                     </div>
                 </div>
 
                 <div class="flex flex-row gap-x-10 font-black">
-                    <a class="text-gray-700 dark:text-gray-400 hover:text-white duration-200"
-                        href="#tools">TOOLS</a>
+                    <a class="text-gray-700 dark:text-gray-400 hover:text-white duration-200" href="#tools">TOOLS</a>
                     <a class="text-gray-700 dark:text-gray-400 hover:text-white duration-200"
                         href="#certificate">CERTIFICATE</a>
-                    <a class="text-gray-700 dark:text-gray-400 hover:text-white duration-200"
-                        href="#project">MY
+                    <a class="text-gray-700 dark:text-gray-400 hover:text-white duration-200" href="#project">MY
                         PROJECT</a>
                 </div>
             </div>
@@ -56,27 +54,27 @@ Please support me with giving an credit when using my projects :)
             <div class="flex md:hidden justify-between w-full">
                 <div class="relative">
                     <button id="theme-button"
-                        class="flex flex-row items-center px-4 py-1.5 bg-slate-500 bg-opacity-40 dark:bg-slate-800 rounded-lg before:scale-120 active:scale-90">
+                        class="flex flex-row items-center px-4 py-1.5 bg-zinc-400 dark:bg-zinc-900 rounded-lg before:scale-120 active:scale-90">
                         <img src="assets/theme arrow.svg" class="mr-2 w-6" />
-                        <span id="current-theme" class="font-bold text-sm text-white">System</span>
+                        <span id="current-theme" class="font-bold text-sm">System</span>
                     </button>
 
                     <div id="theme-dropdown"
-                        class="hidden absolute left-0 mt-2 w-36 bg-gray-200 dark:bg-slate-900 shadow-lg rounded-lg">
+                        class="hidden absolute left-0 mt-2 w-36 bg-gray-300 dark:bg-zinc-900 shadow-lg rounded-lg">
                         <button
-                            class="theme-option block w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg"
+                            class="theme-option block w-full text-left px-4 py-2 hover:bg-gray-400 dark:hover:bg-zinc-800 rounded-lg"
                             data-theme="system">System</button>
                         <button
-                            class="theme-option block w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg"
+                            class="theme-option block w-full text-left px-4 py-2 hover:bg-gray-400 dark:hover:bg-zinc-800 rounded-lg"
                             data-theme="light">Light</button>
                         <button
-                            class="theme-option block w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg"
+                            class="theme-option block w-full text-left px-4 py-2 hover:bg-gray-400 dark:hover:bg-zinc-800 rounded-lg"
                             data-theme="dark">Dark</button>
                     </div>
                 </div>
 
-                <button type="button"
-                    class="p-2.5 justify-center items-center text-sm rounded-lg hover:bg-slate-500 hvoer:bg-opacity-40 dark:hover:bg-slate-800 text-white"
+                <button id="toggleMenu" type="button"
+                    class="p-2.5 justify-center items-center text-sm rounded-lg hover:bg-zinc-400 dark:hover:bg-zinc-900 before:scale-100 active:scale-90"
                     aria-controls="mobile-menu" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -85,13 +83,34 @@ Please support me with giving an credit when using my projects :)
                             d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
                 </button>
+
+                <!-- Mobile Menu -->
+                <div id="menu"
+                    class="fixed top-0 left-0 h-screen w-full shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out">
+                    <div class="p-4 flex justify-between items-center bg-zinc-400 dark:bg-zinc-900">
+                        <span class="text-lg font-bold">Menu</span>
+                        <button id="closeMenu"
+                            class="text-4xl hover:bg-zinc-500 dark:hover:bg-zinc-800 px-2.5 rounded-lg">×</button>
+                    </div>
+                    <ul class="p-5 space-y-3 bg-gray-300 dark:bg-zinc-950 font-black">
+                        <li><a href="#tools"
+                                class="block p-3 rounded-lg text-gray-700 dark:text-gray-400 hover:bg-gray-400 dark:hover:bg-zinc-900 hover:text-white duration-200">TOOLS</a>
+                        </li>
+                        <li><a href="#certificate"
+                                class="block p-3 rounded-lg text-gray-700 dark:text-gray-400 hover:bg-gray-400 dark:hover:bg-zinc-900 hover:text-white duration-200">CERTIFICATE</a>
+                        </li>
+                        <li><a href="#project"
+                                class="block p-3 rounded-lg text-gray-700 dark:text-gray-400 hover:bg-gray-400 dark:hover:bg-zinc-900 hover:text-white duration-200">MY
+                                PROJECT</a></li>
+                    </ul>
+                </div>
             </div>
+        </div>
     </header>
 
     <!-- Main Content -->
-    <main class="flex flex-row pt-52 md:pt-60 w-full md:max-w-6xl mx-auto">
-        <div
-            class="flex flex-col md:flex-row px-5 md:px-0 justify-between items-center text-center md:text-left w-full">
+    <main class="flex flex-col pt-52 md:pt-60 w-full md:max-w-6xl mx-auto px-5 md:px-0">
+        <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left w-full">
             <div class="flex flex-col w-full">
                 <p class="font-black text-center md:text-start text-5xl md:text-7xl">NOKARIN DEV</p>
                 <p class="font-bold text-xl md:text-2xl max-w-[36rem]">Hello, im nokarin or called as rio. I’m from
@@ -122,15 +141,13 @@ Please support me with giving an credit when using my projects :)
     </main>
 
     <!-- Footer -->
-    <!-- <footer>
-        <div
-            class="flex flex-row fixed w-full backdrop-blur-2xl bottom-0 justify-center items-center mx-auto font-bold">
-            <p>&copy; nokarin 2025. All Rights Reserved.</p>
-        </div>
-    </footer> -->
+    <footer>
+    </footer>
 
     <!-- Script -->
+    <script src="js/header.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/menu.js"></script>
 </body>
 
 </html>
