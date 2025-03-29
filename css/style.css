@@ -1,0 +1,21 @@
+/* 
+Coded By Nokarin_Dev
+*/
+
+.form-container {
+    border: 1.5px solid transparent;
+    background: linear-gradient(#c1c1c1, #c9c9c9) padding-box,
+        linear-gradient(145deg, transparent 35%, #1087d1, #f7fb0c) border-box;
+    padding: 32px 24px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.dark\:form-dark:where(.dark, .dark *) {
+    background: linear-gradient(#090909, #0f0f0f) padding-box,
+        linear-gradient(145deg, transparent 35%, #8709a4, #e417ef) border-box;
+}

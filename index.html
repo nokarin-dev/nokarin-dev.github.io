@@ -10,6 +10,7 @@ Please support me with giving an credit when using my projects :)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/output.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
     <title>nokarin | Portofolio</title>
 </head>
 
@@ -110,6 +111,31 @@ Please support me with giving an credit when using my projects :)
 
     <!-- Main Content -->
     <main class="flex flex-col pt-52 md:pt-60 w-full md:max-w-6xl mx-auto px-5 md:px-0">
+        <!-- Conatact Card -->
+        <div id="contact-card"
+            class="hidden absolute z-[100] bg-black bg-opacity-50 backdrop-blur-sm w-full h-full left-0 top-0">
+            <div class="flex w-full h-full items-center justify-center">
+                <div class="form-container form-light dark:form-dark w-4/5 md:w-1/3">
+                    <form class="flex flex-col gap-5">
+                        <div>
+                            <label for="email" class="block mb-2 text-zinc-500 font-bold">Your Email</label>
+                            <input type="text" id="email" name="email" required=""
+                                class="w-full p-3 rounded-lg bg-transparent border border-zinc-800 resize-none focus:outline-none focus:border-blue-500 dark:focus:border-[#8709a4]">
+                        </div>
+                        <div>
+                            <label for="textarea" class="block mb-2 text-zinc-500 font-bold">How Can We Help
+                                You?</label>
+                            <textarea name="textarea" id="textarea" rows="10" cols="50" required=""
+                                class="w-full p-3 rounded-lg h-32 bg-transparent border border-zinc-800 resize-none focus:outline-none focus:border-blue-500 dark:focus:border-[#8709a4]"></textarea>
+                        </div>
+                        <button
+                            class="bg-zinc-400 dark:bg-zinc-800 hover:bg-blue-800 dark:hover:bg-purple-800 w-fit py-3 px-10 rounded-lg font-bold duration-200 mx-auto"
+                            type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
         <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left w-full">
             <div class="flex flex-col w-full">
                 <p class="font-black text-center md:text-start text-5xl md:text-7xl">NOKARIN DEV</p>
@@ -119,7 +145,7 @@ Please support me with giving an credit when using my projects :)
                     experienced on full stack website developers</p>
             </div>
 
-            <button type="submit"
+            <button id="contact-button" type="button"
                 class="relative w-fit mt-10 md:mt-0 shrink-0 bottom-0 flex justify-center items-center gap-2 rounded-xl text-white font-black bg-[#2B4E9A] uppercase px-8 py-4 z-10 overflow-hidden ease-in-out duration-300 group hover:text-black hover:bg-white active:scale-95 active:duration-0 focus:bg-white focus:text-black isolation-auto before:absolute before:w-full before:transition-all before:duration-300 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-[#FFF] before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-300">
                 <span
                     class="truncate eaes-in-out duration-300 group-active:-translate-x-96 group-focus:translate-x-96">Contact
@@ -145,6 +171,27 @@ Please support me with giving an credit when using my projects :)
     </footer>
 
     <!-- Script -->
+    <script>
+        async function sendMessage() {
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            if (!email || !message) {
+                alert("Email and message are required!");
+                return;
+            }
+
+            const response = await fetch("https://your-worker-name.workers.dev", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, message }),
+            });
+
+            const data = await response.json();
+            alert(data.success ? "Message sent!" : "Error: " + data.error);
+        }
+    </script>
+    <script src="js/contact_card.js"></script>
     <script src="js/header.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/menu.js"></script>
