@@ -171,26 +171,6 @@ Please support me with giving an credit when using my projects :)
     </footer>
 
     <!-- Script -->
-    <script>
-        async function sendMessage() {
-            const email = document.getElementById("email").value;
-            const message = document.getElementById("message").value;
-
-            if (!email || !message) {
-                alert("Email and message are required!");
-                return;
-            }
-
-            const response = await fetch("https://your-worker-name.workers.dev", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email, message }),
-            });
-
-            const data = await response.json();
-            alert(data.success ? "Message sent!" : "Error: " + data.error);
-        }
-    </script>
     <script src="js/contact_card.js"></script>
     <script src="js/header.js"></script>
     <script src="js/theme.js"></script>
